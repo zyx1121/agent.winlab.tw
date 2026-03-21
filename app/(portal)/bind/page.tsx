@@ -1,9 +1,9 @@
 "use client"
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { generateBindingCode } from "@/lib/actions/binding"
+import { useState } from "react"
 
 const PLATFORMS = ["line", "telegram", "discord"] as const
 type Platform = (typeof PLATFORMS)[number]
@@ -29,8 +29,8 @@ export default function BindPage() {
   }
 
   return (
-    <div className="container max-w-md py-12">
-      <Card>
+    <div className="w-full h-full flex items-center justify-center">
+      <Card className="w-full max-w-sm">
         <CardHeader>
           <CardTitle>Bind Bot Account</CardTitle>
           <CardDescription>

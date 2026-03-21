@@ -1,6 +1,6 @@
-import { createClient } from "@/lib/supabase/server"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { createClient } from "@/lib/supabase/server"
 
 export default async function ProfilePage() {
   const supabase = await createClient()
@@ -29,8 +29,8 @@ export default async function ProfilePage() {
   ]
 
   return (
-    <div className="container max-w-md py-12">
-      <Card>
+    <div className="w-full h-full flex items-center justify-center">
+      <Card className="w-full max-w-sm">
         <CardHeader>
           <CardTitle>{profile?.display_name ?? user.email}</CardTitle>
         </CardHeader>

@@ -1,8 +1,8 @@
 "use client"
-import { useState } from "react"
-import { createClient } from "@/lib/supabase/client"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { createClient } from "@/lib/supabase/client"
+import { useState } from "react"
 
 export default function LoginPage() {
   const [loading, setLoading] = useState(false)
@@ -27,8 +27,8 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="container max-w-sm py-24">
-      <Card>
+    <div className="w-full h-full flex items-center justify-center">
+      <Card className="w-full max-w-sm">
         <CardHeader>
           <CardTitle>WinLab Agent</CardTitle>
           <CardDescription>使用 WinLab Keycloak 帳號登入</CardDescription>
